@@ -1,0 +1,243 @@
+*,::before,::after{margin: 0; box-sizing: border-box;}
+a{ text-decoration: none;}
+img{ vertical-align: bottom;}
+ul{ list-style: none; padding: 0;}
+button{ cursor: pointer; padding: 0;}
+label{ display: inline-block;}
+:disabled{ cursor: not-allowed;}
+
+
+@font-face {
+    font-family: proxima;
+    src: url(../project/proximanova-regular.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: proxima;
+    src: url(../project/proximanova-bold.woff2);
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: proxima;
+    src: url(../project/Proxima-Nova-Thin.woff2); 
+    font-weight: 100;
+    font-display: swap;
+}
+
+
+html{
+    font-size: 15px;
+    --ff: proxima, sans-serif;
+    --red:#ca3c3c;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body{
+    font: 16px/1.3 var(--ff);
+}
+.container{
+    max-width: 1200px; margin: auto; padding: 0 1rem;
+}
+.row{
+    display: flex; flex-flow: row wrap; margin: 0 -1rem;
+}
+[class^="col-"]{flex: 1 0 auto; padding: 0 1rem;}
+.col-1{flex-basis: 8.33%; max-width: 8.33%;}
+.col-2{flex-basis: 16.66%; max-width: 16.66%;}
+.col-3{flex-basis: 25%; max-width: 25%;}
+.col-4{flex-basis: 33.33%; max-width: 33.33%;}
+.col-5{flex-basis: 41.66%; max-width: 41.66%;}
+.col-6{flex-basis: 50%; max-width: 50%;}
+.col-7{flex-basis: 58.33%; max-width: 58.33%;}
+.col-8{flex-basis: 66.66%; max-width: 66.66%;}
+.col-9{flex-basis: 75%; max-width: 75%;}
+.col-10{flex-basis: 83.33%; max-width: 83.33%;}
+.col-11{flex-basis: 91.66%; max-width: 91.66%;}
+.col-12{flex-basis: 100%; max-width: 100%;}
+.flex{display: flex;}
+.space-bet{justify-content: space-between;}
+.justify-center{justify-content: center;}
+.align-item{align-items: center;}
+.row-gap{row-gap: 4rem;}
+
+/*layout*/
+header{background-color: #000;color: #fff; position: sticky;}
+header h1{font-size: 30px;}
+header a{color: inherit; display: inline-block; line-height: 80px;}
+.collapse{height: 100%;}
+.h100{height: 100%;}
+nav{margin-left: -20px;}
+nav li{margin: 0 5px;}
+nav a{padding: 0 15px;}
+.btn{background: none; border: 2px solid; color: var(--red); width: 90px; height: 35px; border-radius: 10px; font: 10px  var(--ff);}
+.menu{display: none;}
+.menu span{ display: block; height: 2px; background: var(--red); margin: 6px 12px; transform-origin: right center; transition: 400ms;}
+.menu.active span:nth-child(1){ transform: rotate(-15deg); }
+.menu.active span:nth-child(2){ opacity: 0; }
+.menu.active span:nth-child(3){ transform: rotate(15deg);}
+
+.banner{background: #666; color: #fff; padding: 300px 0;}
+.banner button{background: none; border: none; color: inherit; font-size: 10rem; margin-right: 40px;}
+.banner p{font: 100 4rem var(--ff);}
+.banner a{color: var(--red);}
+
+h2{font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom: 2rem;}
+.wrap-3{background: var(--red); color: #fff; padding: 50px 0;}
+.circle{width: 100px; height: 100px; border: 2px solid ; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; font-size: 36px; margin-right: 2rem;}
+.wrap-3 h3{font-size: 16px;}
+.wrap-3 p{font-size: 14px; font-weight: 100; line-height: 22px;}
+
+
+.wrap-4{background: #fff; color: var(--red); text-align: center; line-height: 10rem; font-size: 36px;}
+
+.wrap-5{background: #ebebeb; color: #363636; padding: 100px 0;}
+.wrap-5 .btn{margin: 0 10px 30px 0;}
+.wrap-5 .btn.active{background: var(--red); color: #fff; border: none;}
+.work{position: relative; margin-top: 2rem;}
+.caption{background: #fff; position: absolute; bottom: 0; left: 0; right: 0; text-align: center; padding: 20px 0; opacity: 0; transition: 400ms;}
+.caption h3{font-size: 18px; color: var(--red); line-height: 40px;}
+.caption p{font-size: 14px; font-weight: 100; color: #898989; line-height: 20px;}
+.work:hover .caption{opacity: 1;}
+.work img{max-width: 100%; height: auto;}
+.seemore{margin-top: 2rem; background: none; border: none; color: var(--red); font-size: 36px;}
+
+
+.wrap-6{ background: #666; color: #fff; padding: 4rem 0 2rem;}
+.reviews{ text-align: center; }
+/* .review{ display: none; } */
+/* .review.active{ display: block;} */
+.review blockquote img{ margin: 17px 0 10px;}
+.review blockquote q{ font-size: 36px; font-weight: 100; line-height: 41px;}
+.review blockquote figcaption{ font-weight: bold;}
+/* .pager{ list-style: none; padding: 0; margin: 30px 0 0 0;}
+.pager li{ margin: 0 5px; }
+.pager a{ display: block; width: 10px; height: 10px; border: 2px solid #fff; border-radius: 50%; }
+.pager a.active{ background: #fff;} */
+.wrap-6 .bx-wrapper{ background: none; border: none; box-shadow: 0 0; }
+.wrap-6 .bx-wrapper img{ display: inline;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a{ border: 2px solid #fff;}
+.wrap-6 .bx-wrapper .bx-pager.bx-default-pager a.active,.wrap-6  .bx-wrapper .bx-pager.bx-default-pager a:focus, .wrap-6  .bx-wrapper .bx-pager.bx-default-pager a:hover{ background: #fff;}
+
+
+
+
+.wrap-7{background: #fff; color: #363636; padding: 100px 0;}
+.team{position: relative; margin: 50px 0 33px;}
+.social{position: absolute; top: 60px; left: 140px;}
+.social li{margin-right: 10px;}
+.social a{display: block; background: var(--red); color: #fff; width: 50px;line-height: 50px; border-radius: 50%; text-align: center; font-size: 24px;}
+.gap{margin: 50px 0 0 100px;}
+.gap h3{font-size: 18px; color: var(--red);}
+.gap small{font-size: 14px; color: #898989; font-weight: 100;}
+.gap p{font-size: 14px; font-weight: 100; color: #363636; line-height: 22px; margin-top: 2rem;}
+
+
+.wrap-8{padding: 90px 0 0 0; background: #666; color: #fff; text-align: center;}
+.wrap-8 span{font-size: 72px;}
+.wrap-8 p{font-size: 72px; font-weight: 100;}
+.wrap-8 b{font-size: 18px; margin-bottom: 80px; display: inline-block;}
+
+
+.wrap-9{background: #fff; color: #363636; padding: 100px 0;}
+canvas{background: #ddd; margin-top: 50px; max-width: 100%;}
+.wrap-9 h3{color: var(--red);}
+.accordion{color:#898989; margin-top: 50px;}
+.accordion li{ margin-bottom: 10px;}
+.accordion a{display: block; color: inherit; border: 1px solid #ebebeb; padding: 11px 19px; border-radius: 
+10px;}
+.accordion p{display: none; font-size: 14px; color: #363636; font-weight: 100; line-height: 22px; margin: 20px;}
+.accordion a span.fa{margin-right: 18px;}
+.accordion li.active a{color: var(--red);}
+.accordion li.active p{display: block;}
+.accordion a::after{content: '+'; float: right;}
+.accordion li.active a::after{content: '-';}
+    
+
+.wrap-10{background: var(--red); color: #fff; padding: 23px 0 22px;}
+.wrap-10 input{height: 35px; background: none; border: none; width: 370px; font: 100 36px var(--ff); color: #fff;} 
+.wrap-10 input::placeholder{color: #fff;}
+.wrap-10 .btn{background: #fff;}
+
+
+.wrap-11{background: #7f7f7f; padding: 28px 0 0 0 ;}
+.box{background: #a6a6a6;height: 95px; display: grid; place-items: center; margin-bottom: 27px;}
+.box img{max-width: 100%; height: auto;}
+
+
+
+.wrap-12{ background: #ebebeb; color: #363636; padding: 100px 0;}
+.wrap-12 address{ line-height: 30px; color: #898989; }
+.social-sm{ font-size: 16.22px; }
+.social-sm a{ display: inline-block; color: var(--red); margin: 20px 20px 20px 0; }
+.wrap-12 label{ border: 2px solid; padding: 17px; margin: 1rem 0;}
+.wrap-12 button{ margin: 1rem 0; width: 100%; height: 80px; border: none; background: #fff; color: var(--red); border-radius: 10px; font-size: 16px;}
+.wrap-12 button span.fa{ font-size: 36px; vertical-align: middle;} 
+.wrap-12 :is(input, textarea){ border: none; background: none; }
+.wrap-12 :is(input, textarea):focus{ outline: none; }
+.wrap-12 label:focus-within{ border-color: var(--red);}
+.wrap-12 textarea{ resize: none; vertical-align: top; height: 42px;}
+
+
+.wrap-13{text-align: center; padding: 50px 0; background: #252525; color: #fff;}
+.wrap-13 a{color: var(--red);}
+
+.overlay{ background: #000b; position: fixed; inset: 0; z-index: 10; }
+.popover{ background-image: linear-gradient(to right bottom, #383d3a, #525e5c, #6f8084, #92a3ae, #bec5d8); padding: 6rem; position: fixed; left: 50%; top: 100px; z-index: 11; transform: translateX(-50%); height: 20rem;width: 30rem;}
+
+.popover .close{ position: absolute; right: 15px; top: -10px; background: none; border: none; width: 20px; font-size: 30px; }
+.popover input{ margin: 5px 10px;}
+.popover button{width: 5rem; height: 2.5rem; margin: 1.5rem 0; font-size: 24px; font-size: 15px; font-weight: 600;}
+.hiddenform{ display: none;}
+ label { display: inline-block; font-size: 20px; font-weight: 600;}
+
+/*responsive*/
+
+/*ipad landscape*/
+@media screen and (max-width:1220px){
+    html{ font-size: 14px;}
+    h2{ font-size: 62px;}
+}
+/*ipad portrait*/
+@media screen and (max-width:980px){
+    .col-t-3{ flex-basis: 25%; max-width: 25%;}
+    .col-t-4{ flex-basis: 33.33%; max-width: 33.33%;}
+    .col-t-6{ flex-basis: 50%; max-width: 50%;}
+    .col-t-12{ flex-basis: 100%; max-width: 100%;}
+    .banner p{ font-size: 2.5rem;}
+    .gap{ margin-left: 50px;}
+    .social{ flex-flow: column wrap; left: auto; right: 0; top: 0;}
+    .social li{ margin: 0 0 10px 0;}
+    h2{ font-size: 68px;}
+    .wrap-8 p{ font-size: 50px;}
+}
+/*phone landscape*/
+@media screen and (max-width:767px){
+    html{ font-size: 13px;}
+    .col-m-6{ flex-basis: 50%; max-width: 50%;}
+    .collapse{ display: none;}
+    .wrap-5 .btn{ margin-right: 6px;}
+    .menu{ display: inline-block; position: absolute; right: 1rem; top: 20px;}
+    .collapse{ display: none; height: auto; position: absolute; left: 0; right: 0; top: 80px; background: #000; padding-bottom: 1rem;}
+    .collapse div.flex{ flex-direction: column;}
+    .collapse div.flex .btn{ flex-shrink: 0;}
+    .collapse nav{ width: 100%; text-align: right;}
+    .collapse nav ul{ flex-flow: column wrap; }
+    .collapse nav a{ display: block; line-height: 40px;}
+ 
+}
+/*phone portrait*/
+@media screen and (max-width:460px){
+    .col-p-4{ flex-basis: 33.33%; max-width: 33.33%;}
+    .col-p-6{ flex-basis: 50%; max-width: 50%;}
+    .col-p-12{ flex-basis: 100%; max-width: 100%;}
+    .banner .flex{ flex-flow: column wrap; }
+    .review blockquote q{ font-size: 24px; line-height: 30px;}
+    .wrap-9 canvas{ margin-top: 2rem;}
+    .wrap-10 input{ width: 230px; font-size: 24px;}
+    .col-auto{ flex-basis: 50%; max-width: 100%;}
+    .banner button{ font-size: 6rem;}
+    .banner p{ font-size: 24px;}
+}
